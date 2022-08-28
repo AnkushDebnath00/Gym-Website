@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fitness Club</title>
+    <link rel="stylesheet" href="css/style.css">
+    <style>
+        /* css reset */
+        * {
+            font-family: 'Agency FB', Verdana, Geneva, Tahoma, sans-serif;
+        }
+
+        *::selection {
+            background-color: beige;
+            color: chocolate;
+        }
+
+        body {
+            margin: 0px;
+            padding: 0px;
+            background-image: url('img/bg.jpg');
+            color: white;
+            height: 132vh;
+            background-repeat: no-repeat;
+        }
+
+        .left {
+            /* border: 2px solid red; */
+            display: inline-block;
+            position: absolute;
+            left: 60px;
+            top: 20px;
+        }
+
+        .left img {
+            width: 60px;
+            filter: invert(100%);
+            display: block;
+            margin: auto;
+        }
+
+        .left div a {
+            text-decoration: none;
+            color: white;
+            text-align: center;
+            line-height: 30px;
+            font-size: 25px;
+        }
+
+        .left div a:active {
+            font-style: italic;
+        }
+
+        .mid {
+            /* border: 2px solid blue; */
+            display: block;
+            width: 33%;
+            margin: 20px auto;
+            text-align: center;
+        }
+
+        .right {
+            /* border: 2px solid greenyellow; */
+            display: inline-block;
+            position: absolute;
+            right: 41px;
+            top: 20px;
+        }
+
+        .navbar li {
+            display: inline-block;
+            margin: 0px 9px;
+            padding: 9px;
+            font-size: 25px;
+        }
+
+        .navbar li a {
+            color: white;
+            text-decoration: none;
+            padding-right: 20px;
+            text-align: center;
+        }
+
+        .navbar li a:hover {
+            /* font-weight: bold; */
+            color: burlywood;
+            border-bottom: 2px solid burlywood;
+        }
+
+        .navbar li a:active {
+            /* font-weight: bold; */
+            color: lightgray;
+            font-style: italic;
+        }
+
+        .navbar li a.active {
+            /* font-weight: bold; */
+            color: burlywood;
+            border-bottom: 2px solid burlywood;
+
+        }
+
+        .btn {
+            margin: 0px 9px;
+            background-color: transparent;
+            color: white;
+            padding: 4px 15px;
+            border: 2px solid grey;
+            border-radius: 10px;
+            font-size: 15px;
+            cursor: pointer;
+        }
+
+        .btn:hover {
+            background-color: beige;
+            color: chocolate;
+        }
+
+        .btn:active {
+            background-color: rgb(46, 46, 46);
+            font-style: italic;
+        }
+
+        .container {
+            border: 2px solid white;
+            margin: 100px 60px;
+            padding: 30px 30px;
+            border-radius: 10px;
+            width: 33%;
+            text-align: center
+        }
+
+        .normal {
+            display: inline-block;
+        }
+
+        .boldred {
+            font-weight: bold;
+            color: red;
+            text-decoration: underline;
+            display: inline-block;
+            margin: 6px;
+        }
+
+        .form-group input {
+            font-size: 15px;
+            text-align: center;
+            display: block;
+            width: 611px;
+            height: 10px;
+            padding: 6px;
+            border: 3px solid transparent;
+            margin: 8px auto;
+            border-radius: 5px;
+            font-style: italic;
+        }
+
+        .form-group input:hover {
+            background-color: beige;
+        }
+
+        .form-group button {
+            display: block;
+            margin: auto;
+            margin-top: 30px;
+            width: 23%;
+        }
+        /* label{
+            float: left;
+            width: 50%;
+            background-color: whitesmoke;
+            color: grey;
+            font-style: italic;
+            font-size: 15px;
+        }
+        select, option {
+            position: relative;
+            bottom: 2px;
+            float: right;
+            width: 50%;
+            background-color: whitesmoke;
+            color: grey;
+            font-style: italic;
+            font-size: 15px;
+            margin-bottom: 4px;
+        } */
+
+        /* .gradiant {
+            background-color: beige;
+            color: beige;
+            opacity: 30%;
+            display: inline-block;
+            position: absolute;
+            right: 0px;
+            bottom: 0px;
+            width: 50%;
+        }
+        .gradiant p{
+            font-size: 120px;
+        } */
+    </style>
+</head>
+
+<body>
+    <header class="header">
+        <div class="left">
+            <!-- for logo -->
+            <img src="img/logo.png" alt="not loaded">
+            <div>
+                <a href="Gym Website.html">Fitness Club</a>
+            </div>
+        </div>
+        <div class="mid">
+            <!-- for navbar -->
+            <ul class="navbar">
+                <li><a href="Gym Website.html" class="active">Home</a></li>
+                <li><a href="#">About us</a></li>
+                <li><a href="#">Fitness Centres</a></li>
+                <li><a href="#">Contact us</a></li>
+            </ul>
+        </div>
+        <div class="right">
+            <!-- for buttons -->
+            <button class="btn">Call us now</button>
+            <button class="btn">Email us</button>
+        </div>
+    </header>
+    <div class="container">
+        <h1 class="normal">
+            Join the best Gym in Kolkata <h1 class="boldred">NOW</h1>
+        </h1>
+        <form action="noaction.php">
+            <div class="form-group">
+                <input type="text" name="" placeholder="Enter your name">
+                <input type="number" name="" placeholder="Enter your Age">
+                <input type="text" name="" placeholder="Enter your Gender">
+
+                <!-- <label for="Gender"> Gender: </label>
+                <select name="Gender" id="Gender">
+                    <option value="male">Male</option>
+                    <option value="female">Female</option>
+                    <option value="other">Other</option>
+                </select> -->
+
+                <input type="text" name="" placeholder="Enter your Address">
+                <input type="text" name="" placeholder="Enter your E-mail ID">
+                <input type="text" name="" placeholder="Enter your Phone No">
+
+                <button class="btn">Submit</button>
+            </div>
+        </form>
+
+    </div>
+    <!-- <div class="gradiant">
+        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Omnis voluptas consequuntur quo unde dicta
+            veritatis, mollitia, itaque</p>
+    </div> -->
+</body>
+
+</html>
